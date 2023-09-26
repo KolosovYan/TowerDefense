@@ -3066,6 +3066,14 @@ PrefabInstance:
       value: Portal
       objectReference: {fileID: 0}
     - target: {fileID: 4191606592292026705, guid: 52d7eff4c4135a9469e0852c1784796d, type: 3}
+      propertyPath: startDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191606592292026705, guid: 52d7eff4c4135a9469e0852c1784796d, type: 3}
+      propertyPath: minSpawnDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191606592292026705, guid: 52d7eff4c4135a9469e0852c1784796d, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1378189262}

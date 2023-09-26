@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
 
     private IEnumerator MoveToTarget()
     {
-        while(Vector2.Distance(cashedTransform.position, target.position) > 0.5)
+        while(target != null && Vector2.Distance(cashedTransform.position, target.position) > 0.5)
         {
             cashedTransform.position = Vector2.MoveTowards(cashedTransform.position, target.position, bulletSpeed * Time.deltaTime);
             yield return new WaitForFixedUpdate();
@@ -35,7 +35,8 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        enemyController.DealDamage(damage);
+        if (target != null)
+            enemyController.DealDamage(damage);
         Destroy(gameObject);
     }
 }
